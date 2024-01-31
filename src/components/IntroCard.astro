@@ -2,7 +2,7 @@
 import Card from './Card/index.astro'
 import Button from './Button.astro'
 import { LINKS } from '../lib/constants'
-import { RiGithubFill, RiLinkedinBoxFill } from 'react-icons/ri'
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
 ---
 
 <Card colSpan="md:col-span-3" rowSpan="md:row-span-3">
@@ -15,16 +15,21 @@ import { RiGithubFill, RiLinkedinBoxFill } from 'react-icons/ri'
 				</p>
 			</div>
 			<div class="flex gap-4">
+				<a href={LINKS.email} aria-label="Email" target="_blank">
+					<Button aria-label="Email">
+						<FaEnvelope className="h-6" />
+						<span class="sr-only">Email</span>
+					</Button>
+				</a>
 				<a href={LINKS.linkedin} aria-label="LinkedIn profile" target="_blank">
 					<Button aria-label="LinkedIn profile">
-						<RiLinkedinBoxFill className="h-6" />
+						<FaLinkedin className="h-6" />
 						<span class="sr-only">LinkedIn Profile</span>
 					</Button>
 				</a>
-
 				<a href={LINKS.github} aria-label="GitHub profile" target="_blank">
 					<Button aria-label="GitHub profile">
-						<RiGithubFill className="h-6" />
+						<FaGithub className="h-6" />
 						<span class="sr-only">GitHub Profile</span>
 					</Button>
 				</a>
