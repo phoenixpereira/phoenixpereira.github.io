@@ -1,0 +1,32 @@
+{
+	"name": "phoenixpereira.github.io",
+	"type": "module",
+	"version": "1.0.0",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"format": "prettier --write \"**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}\""
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.4.1",
+		"@astrojs/react": "^3.0.9",
+		"@astrojs/tailwind": "^5.1.0",
+		"@types/react": "^18.2.48",
+		"@types/react-dom": "^18.2.18",
+		"astro": "^4.2.6",
+		"motion": "^10.17.0",
+		"postcss": "^8.4.33",
+		"prettier": "^3.2.4",
+		"prettier-plugin-astro": "^0.13.0",
+		"prettier-plugin-tailwindcss": "^0.5.11",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-icons": "^5.0.1",
+		"tailwind": "^4.0.0",
+		"tailwindcss": "^3.4.1",
+		"typescript": "^5.3.3"
+	}
+}

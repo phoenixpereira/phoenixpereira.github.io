@@ -1,0 +1,29 @@
+---
+import Content from './Content.astro'
+
+interface Props {
+	title?: string
+	body?: string
+	colSpan?: string
+	rowSpan?: string
+	href?: string
+	colorText?: string
+}
+
+const { title, body, colSpan, rowSpan, href, colorText } = Astro.props
+---
+
+<div
+	class={`card group overflow-hidden transfor-y-[-40%] bg-darkslate-500 shadow-lg rounded-lg p-6 border border-darkslate-100 hover:border-primary-500 align-start flex-none justify-start relative transform perspective-1200 w-full transition duration-75 ease-in-out col-span-1 h-auto ${
+		colSpan || 'md:col-span-2'
+	} ${rowSpan || ''}`}
+	style={{ height: 'fit-content' }}
+>
+	{
+		(
+			<Content title={title} body={body}>
+				<slot />
+			</Content>
+		)
+	}
+</div>
