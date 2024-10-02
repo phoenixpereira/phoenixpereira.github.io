@@ -53,7 +53,7 @@ const CONFIG = {
         {
           title: 'Computer Science Club Website',
           description:
-            'Developed a dynamic and responsive website for the Computer Science Club within as part of the CS Club Open Source Team using React, Next.js, TypeScript, Tailwind CSS, SQLite, and Redis. Implemented frontend components and ensured a seamless user experience with Clerk to handle account authentication. Deployed the website using Docker containers on AWS, ensuring a scalable and efficient infrastructure to support further CS Club open source projects.',
+            'Made a dynamic and responsive website for the Computer Science Club within as part of the CS Club Open Source Team using React, Next.js, TypeScript, Tailwind CSS, SQLite, and Redis. Implemented frontend components and ensured a seamless user experience with Clerk to handle account authentication. Deployed the website using Docker containers on AWS, ensuring a scalable and efficient infrastructure to support further CS Club open source projects.',
           imageUrl: '/projects/cs-club-website.png',
           link: 'https://github.com/compsci-adl/website',
           techStack: [
