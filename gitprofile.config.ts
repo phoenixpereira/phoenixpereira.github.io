@@ -63,8 +63,6 @@ const CONFIG = {
             'Vite',
             'SQLite',
             'Redis',
-            'Docker',
-            'AWS',
           ],
           date: 'Nov 2023 - Current',
         },
