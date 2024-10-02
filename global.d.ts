@@ -433,6 +433,11 @@ interface Config {
    * Enable PWA
    */
   enablePWA?: boolean;
+
+  /**
+   * About Me
+   */
+  about?: string;
 }
 
 declare const CONFIG: Config;
