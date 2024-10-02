@@ -35,7 +35,7 @@ const CONFIG = {
         {
           title: 'Courses API',
           description:
-            'Contributed to the Courses API, a project that scrapes course information from the University of Adelaide website and serves it through API endpoints for integration into other CS Club projects. Focused on fixing and optimising the web scraper to ensure accurate and efficient data extraction. Additionally, added more API endpoints to enhance access to detailed course information. The API will be across multiple projects, providing reliable and up-to-date course data for students at the University of Adelaide.',
+            'Contributed to the Courses API, a project that scrapes course information from the University of Adelaide website and serves it through API endpoints for integration into other CS Club Open Source Team projects. Focused on fixing and optimising the web scraper to ensure accurate and efficient data extraction. Additionally, added more API endpoints to enhance access to detailed course information. The API will be across multiple projects, providing reliable and up-to-date course data for students at the University of Adelaide.',
           imageUrl: '/projects/courses-api.png',
           link: 'https://github.com/compsci-adl/courses-api',
           techStack: ['Python', 'FastAPI', 'Requests'],
