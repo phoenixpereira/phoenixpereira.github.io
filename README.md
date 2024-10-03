@@ -7,17 +7,20 @@ My [personal portfolio website](https://phoenixpereira.me), created using [GitPr
 To set up the project locally, follow these steps:
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/phoenixpereira/phoenixpereira.github.io.git
    cd phoenixpereira.github.io
    ```
 
 2. **Install the project dependencies:**
+
    ```bash
    pnpm install
    ```
 
 3. **Start the development server:**
+
    ```bash
    pnpm dev
    ```
