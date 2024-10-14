@@ -67,6 +67,21 @@ const CONFIG = {
           date: 'Nov 2023 - Current',
         },
         {
+          title: 'Statify',
+          description:
+            "Statify is a Spotify dashboard created by Christian Dianos and me for the 2024 UniSA Programming Community Code Jam. It visualises a user's top 50 artists, top 100 tracks, and listening trends, including music popularity and duration, using Spotify's API. Statify also generates personalised playlists via Spotify’s recommendations API based on the user's listening habits.",
+          imageUrl: '/projects/statify.png',
+          link: 'https://github.com/phoenixpereira/statify',
+          techStack: [
+            'React',
+            'Typescript',
+            'Tailwind CSS',
+            'Vite',
+            'Recharts',
+          ],
+          date: 'Jul 2024 - Current',
+        },
+        {
           title: 'MGT Detection UI',
           description:
             'Created a Machine Generated Text (MGT) detector to determine if text is machine-generated or not. Conducted in-depth analysis of the HC3 dataset using Python to generate text statistics required for visualisations. Uses multiple MGT detection models through the Hugging Face API rather than locally, improving the user experience.',
