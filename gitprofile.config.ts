@@ -79,7 +79,7 @@ const CONFIG = {
             'Vite',
             'Recharts',
           ],
-          date: 'Jul 2024 - Current',
+          date: 'Sep 2024 - Oct 2024',
         },
         {
           title: 'MGT Detection UI',
