@@ -2,8 +2,7 @@ import { Fragment, useState } from 'react';
 import LazyImage from '../lazy-image';
 import { skeleton } from '../../utils';
 import { SanitizedExternalProject } from '../../interfaces/sanitized-config';
-import Modal from './Modal'; // Import the Modal component
-
+import Modal from './Modal';
 const ExternalProjectCard = ({
   externalProjects,
   header,
@@ -101,9 +100,9 @@ const ExternalProjectCard = ({
                       })}
                       style={{
                         objectFit: 'contain',
-                        width: '100%', // Full width of the container
-                        height: 'auto', // Maintain aspect ratio
-                        maxHeight: '400px', // Increased max height for larger images
+                        width: '100%',
+                        height: 'auto',
+                        maxHeight: '400px',
                       }}
                     />
                   </div>
@@ -143,7 +142,6 @@ const ExternalProjectCard = ({
         </div>
       </div>
 
-      {/* Modal for project details */}
       <Modal
         isOpen={isModalOpen}
         onClose={() => setModalOpen(false)}

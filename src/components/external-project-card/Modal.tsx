@@ -1,5 +1,4 @@
 import React from 'react';
-import { skeleton } from '../../utils';
 
 interface ModalProps {
   isOpen: boolean;
@@ -13,12 +12,11 @@ interface ModalProps {
   } | null;
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, project }) => {
+const Modal = ({ isOpen, onClose, project }: ModalProps) => {
   if (!isOpen || !project) return null;
 
   // Function to handle click events on the backdrop
   const handleBackdropClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    // Check if the click target is the backdrop itself
     if (event.currentTarget === event.target) {
       onClose();
     }
@@ -27,11 +25,11 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, project }) => {
   return (
     <div
       className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
-      onClick={handleBackdropClick} // Add onClick to the backdrop
+      onClick={handleBackdropClick}
     >
       <div className="card shadow-lg bg-base-100 max-w-md w-full mx-4">
         <div className="card-body p-6">
-          <h2 className="text-xl font-bold text-center  opacity-90">
+          <h2 className="text-xl font-bold text-center opacity-90">
             {project.title}
           </h2>
           {project.imageUrl && (
@@ -43,7 +41,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, project }) => {
               />
             </div>
           )}
-          <p className="mt-2  text-opacity-60 text-sm">{project.description}</p>
+          <p className="mt-2 text-opacity-60 text-sm">{project.description}</p>
           <div className="mt-2 flex flex-wrap justify-center">
             {project.techStack.map((tech, index) => (
               <div
