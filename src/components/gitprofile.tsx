@@ -46,9 +46,9 @@ const GitProfile = ({ config }: { config: Config }) => {
   const [error, setError] = useState<CustomError | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [profile, setProfile] = useState<Profile | null>(null);
-    const [githubProjects, setGithubProjects] = useState<GithubProject[]>([]);
-    
-    console.log(sanitizedConfig.extracurriculars);
+  const [githubProjects, setGithubProjects] = useState<GithubProject[]>([]);
+
+  console.log(sanitizedConfig.extracurriculars);
 
   const getGithubProjects = useCallback(
     async (publicRepoCount: number): Promise<GithubProject[]> => {

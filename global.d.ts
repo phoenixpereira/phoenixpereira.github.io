@@ -397,7 +397,10 @@ interface Config {
    */
   experiences?: Array<Experience>;
 
-  extracurriculars; Array<Extracurricular>;
+  /**
+   * Extracurriculars list
+   */
+  extracurriculars?: Array<Extracurricular>;
 
   /**
    * Certifications list
