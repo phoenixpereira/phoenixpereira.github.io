@@ -237,6 +237,14 @@ interface Education {
   to: string;
 }
 
+interface Extracurricular {
+  company?: string;
+  position?: string;
+  from: string;
+  to: string;
+  description?: string;
+}
+
 interface Publication {
   title: string;
   conferenceName?: string;
@@ -388,6 +396,8 @@ interface Config {
    * Experience list
    */
   experiences?: Array<Experience>;
+
+  extracurriculars; Array<Extracurricular>;
 
   /**
    * Certifications list

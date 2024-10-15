@@ -30,6 +30,7 @@ import ExternalProjectCard from './external-project-card';
 import BlogCard from './blog-card';
 import Footer from './footer';
 import AboutCard from './about-card';
+import ExtraCurricularCard from './extracurricular-card';
 
 /**
  * Renders the GitProfile component.
@@ -45,7 +46,9 @@ const GitProfile = ({ config }: { config: Config }) => {
   const [error, setError] = useState<CustomError | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [profile, setProfile] = useState<Profile | null>(null);
-  const [githubProjects, setGithubProjects] = useState<GithubProject[]>([]);
+    const [githubProjects, setGithubProjects] = useState<GithubProject[]>([]);
+    
+    console.log(sanitizedConfig.extracurriculars);
 
   const getGithubProjects = useCallback(
     async (publicRepoCount: number): Promise<GithubProject[]> => {
@@ -246,6 +249,12 @@ const GitProfile = ({ config }: { config: Config }) => {
                         educations={sanitizedConfig.educations}
                       />
                     )}
+                    {sanitizedConfig.extracurriculars.length !== 0 && (
+                      <ExtraCurricularCard
+                        loading={loading}
+                        extracurriculars={sanitizedConfig.extracurriculars}
+                      />
+                    )}
                   </div>
                 </div>
                 <div className="lg:col-span-2 col-span-1">
@@ -268,7 +277,6 @@ const GitProfile = ({ config }: { config: Config }) => {
                         externalProjects={
                           sanitizedConfig.projects.external.projects
                         }
-                        googleAnalyticId={sanitizedConfig.googleAnalytics.id}
                       />
                     )}
                     {sanitizedConfig.blog.display && (

@@ -1,15 +1,17 @@
 import React from 'react';
-import { SanitizedEducation } from '../../interfaces/sanitized-config';
+import { SanitizedExtracurricular } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
 
 const ListItem = ({
   time,
-  degree,
-  institution,
+  position,
+  company,
+  description,
 }: {
   time: React.ReactNode;
-  degree?: React.ReactNode;
-  institution?: React.ReactNode;
+  position?: React.ReactNode;
+  company?: React.ReactNode;
+  description?: React.ReactNode;
 }) => (
   <li className="mb-5 ml-4">
     <div
@@ -17,17 +19,20 @@ const ListItem = ({
       style={{ left: '-4.5px' }}
     ></div>
     <div className="my-0.5 text-xs">{time}</div>
-    <h3 className="font-semibold">{degree}</h3>
-    <div className="mb-4 font-normal">{institution}</div>
+    <h3 className="font-semibold">{position}</h3>
+    <div className="font-normal">{company}</div>
+    {description && (
+      <p className="mt-4 text-sm text-opacity-60">{description}</p>
+    )}
   </li>
 );
 
-const EducationCard = ({
+const ExtraCurricularCard = ({
   loading,
-  educations,
+  extracurriculars,
 }: {
   loading: boolean;
-  educations: SanitizedEducation[];
+  extracurriculars: SanitizedExtracurricular[];
 }) => {
   const renderSkeleton = () => {
     const array = [];
@@ -39,12 +44,13 @@ const EducationCard = ({
             widthCls: 'w-5/12',
             heightCls: 'h-4',
           })}
-          degree={skeleton({
+          position={skeleton({
             widthCls: 'w-6/12',
             heightCls: 'h-4',
             className: 'my-1.5',
           })}
-          institution={skeleton({ widthCls: 'w-6/12', heightCls: 'h-3' })}
+          company={skeleton({ widthCls: 'w-6/12', heightCls: 'h-3' })}
+          description={skeleton({ widthCls: 'w-8/12', heightCls: 'h-3' })}
         />,
       );
     }
@@ -60,22 +66,23 @@ const EducationCard = ({
             {loading ? (
               skeleton({ widthCls: 'w-32', heightCls: 'h-8' })
             ) : (
-              <span className=" opacity-70">Education</span>
+              <span className="opacity-70">Extracurriculars</span>
             )}
           </h5>
         </div>
-        <div className=" text-opacity-60">
+        <div className="text-opacity-60">
           <ol className="relative border-l border-neutral-400 my-2 mx-4">
             {loading ? (
               renderSkeleton()
             ) : (
               <>
-                {educations.map((item, index) => (
+                {extracurriculars.map((item, index) => (
                   <ListItem
                     key={index}
                     time={`${item.from} - ${item.to}`}
-                    degree={item.degree}
-                    institution={item.institution}
+                    position={item.position}
+                    company={item.company}
+                    description={item.description}
                   />
                 ))}
               </>
@@ -87,4 +94,4 @@ const EducationCard = ({
   );
 };
 
-export default EducationCard;
+export default ExtraCurricularCard;
