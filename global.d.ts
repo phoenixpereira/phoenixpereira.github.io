@@ -75,10 +75,10 @@ interface ExternalProjects {
   /**
    * Project list
    */
-  projects?: {
+  projects: {
     title: string;
-    description?: string;
-    imageUrl?: string;
+    description: string;
+    imageUrl: string;
     link: string;
   }[];
 }

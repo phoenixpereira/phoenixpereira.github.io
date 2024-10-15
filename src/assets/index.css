@@ -40,7 +40,7 @@ code {
     monospace;
 }
 
-.text-base-content-important {
+.-important {
   color: hsla(var(--bc) / var(--tw-text-opacity)) !important;
 }
 

@@ -65,11 +65,11 @@ const ExperienceCard = ({
             {loading ? (
               skeleton({ widthCls: 'w-32', heightCls: 'h-8' })
             ) : (
-              <span className="text-base-content opacity-70">Experience</span>
+              <span className=" opacity-70">Experience</span>
             )}
           </h5>
         </div>
-        <div className="text-base-content text-opacity-60">
+        <div className=" text-opacity-60">
           <ol className="relative border-l border-base-300 border-opacity-30 my-2 mx-4">
             {loading ? (
               renderSkeleton()

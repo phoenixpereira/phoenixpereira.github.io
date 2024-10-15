@@ -98,16 +98,16 @@ const GithubProjectCard = ({
         <div className="flex justify-between flex-col p-8 h-full w-full">
           <div>
             <div className="flex items-center truncate">
-              <div className="card-title text-lg tracking-wide flex text-base-content opacity-60">
+              <div className="card-title text-lg tracking-wide flex  opacity-60">
                 <MdInsertLink className="my-auto" />
                 <span>{item.name}</span>
               </div>
             </div>
-            <p className="mb-5 mt-1 text-base-content text-opacity-60 text-sm">
+            <p className="mb-5 mt-1  text-opacity-60 text-sm">
               {item.description}
             </p>
           </div>
-          <div className="flex justify-between text-sm text-base-content text-opacity-60 truncate">
+          <div className="flex justify-between text-sm  text-opacity-60 truncate">
             <div className="flex flex-grow">
               <span className="mr-3 flex items-center">
                 <AiOutlineStar className="mr-0.5" />
@@ -145,9 +145,7 @@ const GithubProjectCard = ({
                     {loading ? (
                       skeleton({ widthCls: 'w-40', heightCls: 'h-8' })
                     ) : (
-                      <span className="text-base-content opacity-70">
-                        {header}
-                      </span>
+                      <span className=" opacity-70">{header}</span>
                     )}
                   </h5>
                   {loading ? (
@@ -157,7 +155,7 @@ const GithubProjectCard = ({
                       href={`https://github.com/${username}?tab=repositories`}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-base-content opacity-50 hover:underline"
+                      className=" opacity-50 hover:underline"
                     >
                       See All
                     </a>

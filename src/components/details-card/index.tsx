@@ -80,7 +80,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
   return (
     <div className="card shadow-lg compact bg-base-100">
       <div className="card-body">
-        <div className="text-base-content text-opacity-60">
+        <div className=" text-opacity-60">
           {loading || !profile ? (
             renderSkeleton()
           ) : (

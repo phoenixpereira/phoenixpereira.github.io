@@ -1,23 +1,26 @@
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import LazyImage from '../lazy-image';
-import { ga, skeleton } from '../../utils';
+import { skeleton } from '../../utils';
 import { SanitizedExternalProject } from '../../interfaces/sanitized-config';
+import Modal from './Modal'; // Import the Modal component
 
 const ExternalProjectCard = ({
   externalProjects,
   header,
   loading,
-  googleAnalyticId,
 }: {
   externalProjects: SanitizedExternalProject[];
   header: string;
   loading: boolean;
-  googleAnalyticId?: string;
 }) => {
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [selectedProject, setSelectedProject] =
+    useState<SanitizedExternalProject | null>(null);
+
   const renderSkeleton = () => {
-    const array = [];
-    for (let index = 0; index < externalProjects.length; index++) {
-      array.push(
+    const skeletons = Array.from(
+      { length: externalProjects.length },
+      (_, index) => (
         <div className="card shadow-lg compact bg-base-100" key={index}>
           <div className="p-8 h-full w-full">
             <div className="flex items-center flex-col">
@@ -59,85 +62,57 @@ const ExternalProjectCard = ({
               </div>
             </div>
           </div>
-        </div>,
-      );
-    }
+        </div>
+      ),
+    );
 
-    return array;
+    return skeletons;
   };
 
   const renderExternalProjects = () => {
     return externalProjects.map((item, index) => (
-      <a
+      <div
         className="card shadow-lg compact bg-base-100 cursor-pointer"
         key={index}
-        href={item.link}
-        onClick={(e) => {
-          e.preventDefault();
-
-          try {
-            if (googleAnalyticId) {
-              ga.event('Click External Project', {
-                post: item.title,
-              });
-            }
-          } catch (error) {
-            console.error(error);
-          }
-
-          window?.open(item.link, '_blank');
+        onClick={() => {
+          setSelectedProject(item); // Set selected project
+          setModalOpen(true); // Open modal
         }}
       >
         <div className="p-8 h-full w-full">
           <div className="flex items-center flex-col">
             <div className="w-full">
-              <div className="px-4">
-                <div className="text-center w-full">
-                  <h2 className="font-bold text-lg text-center opacity-60 mb-2">
-                    {item.title}
-                  </h2>
-                  <div className="mt-2 text-lg text-opacity-60 font-semibold">
-                    {item.date}
-                  </div>
-                  {item.techStack && (
-                    <div className="mt-2 flex flex-wrap justify-center space-x-2">
-                      {item.techStack.map((tech, techIndex) => (
-                        <span
-                          key={techIndex}
-                          className="m-1 text-xs inline-flex items-center font-bold leading-sm px-3 py-1 badge-primary bg-opacity-90 rounded-full"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                  {item.imageUrl && (
-                    <div className="avatar opacity-90 w-full h-auto my-4">
-                      <LazyImage
-                        src={item.imageUrl}
-                        alt={'thumbnail'}
-                        placeholder={skeleton({
-                          widthCls: 'w-full',
-                          heightCls: 'h-full',
-                          shape: '',
-                        })}
-                        style={{
-                          objectFit: 'contain',
-                          width: '100%',
-                          height: '100%',
-                        }}
-                      />
-                    </div>
-                  )}
-                  <p className="mt-2 text-base-content text-opacity-60 text-sm text-justify">
-                    {item.description}
-                  </p>
+              <div className="px-4 text-center">
+                <h2 className="font-bold text-lg opacity-60 mb-2">
+                  {item.title}
+                </h2>
+                <div className="mt-2 text-lg text-opacity-60 font-semibold">
+                  {item.date}
                 </div>
+                {item.imageUrl && (
+                  <div className="opacity-90 w-full h-auto my-4">
+                    <LazyImage
+                      src={item.imageUrl}
+                      alt={'thumbnail'}
+                      placeholder={skeleton({
+                        widthCls: 'w-full',
+                        heightCls: 'h-full',
+                        shape: '',
+                      })}
+                      style={{
+                        objectFit: 'contain',
+                        width: '100%', // Full width of the container
+                        height: 'auto', // Maintain aspect ratio
+                        maxHeight: '400px', // Increased max height for larger images
+                      }}
+                    />
+                  </div>
+                )}
               </div>
             </div>
           </div>
         </div>
-      </a>
+      </div>
     ));
   };
 
@@ -153,9 +128,7 @@ const ExternalProjectCard = ({
                     {loading ? (
                       skeleton({ widthCls: 'w-40', heightCls: 'h-8' })
                     ) : (
-                      <span className="text-base-content opacity-70">
-                        {header}
-                      </span>
+                      <span className=" opacity-70">{header}</span>
                     )}
                   </h5>
                 </div>
@@ -169,6 +142,13 @@ const ExternalProjectCard = ({
           </div>
         </div>
       </div>
+
+      {/* Modal for project details */}
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setModalOpen(false)}
+        project={selectedProject}
+      />
     </Fragment>
   );
 };

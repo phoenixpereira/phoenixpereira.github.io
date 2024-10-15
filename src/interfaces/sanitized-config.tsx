@@ -21,11 +21,11 @@ export interface SanitizedGitHubProjects {
 
 export interface SanitizedExternalProject {
   title: string;
-  description?: string;
-  imageUrl?: string;
+  description: string;
+  imageUrl: string;
   link: string;
-  techStack?: string[];
-  date?: string;
+  techStack: string[];
+  date: string;
 }
 
 export interface SanitizedExternalProjects {
