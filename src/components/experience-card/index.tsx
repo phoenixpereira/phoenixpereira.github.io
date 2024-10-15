@@ -6,7 +6,6 @@ const ListItem = ({
   time,
   position,
   company,
-  companyLink,
 }: {
   time: React.ReactNode;
   position?: React.ReactNode;
@@ -79,11 +78,6 @@ const ExperienceCard = ({
                     time={`${experience.from} - ${experience.to}`}
                     position={experience.position}
                     company={experience.company}
-                    companyLink={
-                      experience.companyLink
-                        ? experience.companyLink
-                        : undefined
-                    }
                   />
                 ))}
               </Fragment>
