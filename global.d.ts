@@ -80,6 +80,8 @@ interface ExternalProjects {
     description: string;
     imageUrl: string;
     link: string;
+    techStack: string[];
+    date: string;
   }[];
 }
 
