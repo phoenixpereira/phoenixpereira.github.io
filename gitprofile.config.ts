@@ -206,6 +206,16 @@ const CONFIG = {
       to: '2025 (Expected)',
     },
   ],
+  extracurriculars: [
+    {
+      company: 'Computer Science Club',
+      position: 'Open Source Officer',
+      from: 'Dec 2023',
+      to: 'Present',
+      description:
+        'Led the open-source projects affiliated with the club, steering the development and progression of these initiatives. Actively contributed to club related projects, collaborating with team members to support the projects’ development. Developed and maintained the club’s website, providing members with up-to-date information regarding club events.',
+    },
+  ],
   // Display articles from your medium or dev account. (Optional)
   blog: {
     source: '', // medium | dev

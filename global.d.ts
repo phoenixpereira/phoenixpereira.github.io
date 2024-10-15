@@ -75,10 +75,10 @@ interface ExternalProjects {
   /**
    * Project list
    */
-  projects?: {
+  projects: {
     title: string;
-    description?: string;
-    imageUrl?: string;
+    description: string;
+    imageUrl: string;
     link: string;
   }[];
 }
@@ -237,6 +237,14 @@ interface Education {
   to: string;
 }
 
+interface Extracurricular {
+  company?: string;
+  position?: string;
+  from: string;
+  to: string;
+  description?: string;
+}
+
 interface Publication {
   title: string;
   conferenceName?: string;
@@ -388,6 +396,11 @@ interface Config {
    * Experience list
    */
   experiences?: Array<Experience>;
+
+  /**
+   * Extracurriculars list
+   */
+  extracurriculars?: Array<Extracurricular>;
 
   /**
    * Certifications list

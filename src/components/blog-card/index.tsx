@@ -132,21 +132,19 @@ const BlogCard = ({
               <div className="w-full">
                 <div className="flex items-start px-4">
                   <div className="text-center md:text-left w-full">
-                    <h2 className="font-medium text-base-content opacity-60">
-                      {article.title}
-                    </h2>
-                    <p className="text-base-content opacity-50 text-xs">
+                    <h2 className="font-medium  opacity-60">{article.title}</h2>
+                    <p className=" opacity-50 text-xs">
                       {formatDistance(article.publishedAt, new Date(), {
                         addSuffix: true,
                       })}
                     </p>
-                    <p className="mt-3 text-base-content text-opacity-60 text-sm">
+                    <p className="mt-3  text-opacity-60 text-sm">
                       {article.description}
                     </p>
                     <div className="mt-4 flex items-center flex-wrap justify-center md:justify-start">
                       {article.categories.map((category, index2) => (
                         <div
-                          className="py-2 px-4 text-xs leading-3 rounded-full bg-base-300 mr-1 mb-1 opacity-50 text-base-content"
+                          className="py-2 px-4 text-xs leading-3 rounded-full bg-base-300 mr-1 mb-1 opacity-50 "
                           key={index2}
                         >
                           #{category}
@@ -163,9 +161,7 @@ const BlogCard = ({
     ) : (
       <div className="text-center mb-6">
         <AiOutlineContainer className="mx-auto h-12 w-12 opacity-30" />
-        <p className="mt-1 text-sm opacity-50 text-base-content">
-          No recent post
-        </p>
+        <p className="mt-1 text-sm opacity-50 ">No recent post</p>
       </div>
     );
   };
@@ -187,9 +183,7 @@ const BlogCard = ({
                   {loading ? (
                     skeleton({ widthCls: 'w-28', heightCls: 'h-8' })
                   ) : (
-                    <span className="text-base-content opacity-70">
-                      My Articles
-                    </span>
+                    <span className=" opacity-70">My Articles</span>
                   )}
                 </h5>
               </div>

@@ -25,10 +25,10 @@ const About: React.FC<AboutProps> = ({
             {loading ? (
               skeleton({ widthCls: 'w-32', heightCls: 'h-8' })
             ) : (
-              <span className="text-base-content opacity-70">About Me</span>
+              <span className=" opacity-70">About Me</span>
             )}
           </h5>
-          <span className="text-base-content text-opacity-60 block text-justify">
+          <span className=" text-opacity-60 block text-justify">
             {loading || !profile
               ? skeleton({ widthCls: 'w-64', heightCls: 'h-5' })
               : about}

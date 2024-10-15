@@ -1,16 +1,17 @@
-import React, { Fragment } from 'react';
-import { SanitizedExperience } from '../../interfaces/sanitized-config';
+import React from 'react';
+import { SanitizedExtracurricular } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
 
 const ListItem = ({
   time,
   position,
   company,
+  description,
 }: {
   time: React.ReactNode;
   position?: React.ReactNode;
   company?: React.ReactNode;
-  companyLink?: string;
+  description?: React.ReactNode;
 }) => (
   <li className="mb-5 ml-4">
     <div
@@ -19,18 +20,19 @@ const ListItem = ({
     ></div>
     <div className="my-0.5 text-xs">{time}</div>
     <h3 className="font-semibold">{position}</h3>
-    <div className="mb-4 font-normal">
-      <p>{company}</p>
-    </div>
+    <div className="font-normal">{company}</div>
+    {description && (
+      <p className="mt-4 text-sm text-opacity-60">{description}</p>
+    )}
   </li>
 );
 
-const ExperienceCard = ({
-  experiences,
+const ExtraCurricularCard = ({
   loading,
+  extracurriculars,
 }: {
-  experiences: SanitizedExperience[];
   loading: boolean;
+  extracurriculars: SanitizedExtracurricular[];
 }) => {
   const renderSkeleton = () => {
     const array = [];
@@ -48,12 +50,14 @@ const ExperienceCard = ({
             className: 'my-1.5',
           })}
           company={skeleton({ widthCls: 'w-6/12', heightCls: 'h-3' })}
+          description={skeleton({ widthCls: 'w-8/12', heightCls: 'h-3' })}
         />,
       );
     }
 
     return array;
   };
+
   return (
     <div className="card shadow-lg compact bg-base-100">
       <div className="card-body">
@@ -62,25 +66,26 @@ const ExperienceCard = ({
             {loading ? (
               skeleton({ widthCls: 'w-32', heightCls: 'h-8' })
             ) : (
-              <span className=" opacity-70">Experience</span>
+              <span className="opacity-70">Extracurriculars</span>
             )}
           </h5>
         </div>
-        <div className=" text-opacity-60">
+        <div className="text-opacity-60">
           <ol className="relative border-l border-neutral-400 my-2 mx-4">
             {loading ? (
               renderSkeleton()
             ) : (
-              <Fragment>
-                {experiences.map((experience, index) => (
+              <>
+                {extracurriculars.map((item, index) => (
                   <ListItem
                     key={index}
-                    time={`${experience.from} - ${experience.to}`}
-                    position={experience.position}
-                    company={experience.company}
+                    time={`${item.from} - ${item.to}`}
+                    position={item.position}
+                    company={item.company}
+                    description={item.description}
                   />
                 ))}
-              </Fragment>
+              </>
             )}
           </ol>
         </div>
@@ -89,4 +94,4 @@ const ExperienceCard = ({
   );
 };
 
-export default ExperienceCard;
+export default ExtraCurricularCard;
