@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface ModalProps {
   isOpen: boolean;
@@ -13,7 +13,11 @@ interface ModalProps {
 }
 
 const Modal = ({ isOpen, onClose, project }: ModalProps) => {
-  if (!isOpen || !project) return null;
+  const [visible, setVisible] = useState(isOpen);
+
+  useEffect(() => {
+    setVisible(isOpen);
+  }, [isOpen]);
 
   // Function to handle click events on the backdrop
   const handleBackdropClick = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -22,12 +26,26 @@ const Modal = ({ isOpen, onClose, project }: ModalProps) => {
     }
   };
 
+  if (!project) return null;
+
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+      className={`fixed inset-0 flex justify-center items-center transition-all duration-300 ${
+        visible
+          ? 'bg-black bg-opacity-50 opacity-100'
+          : 'bg-transparent opacity-0 pointer-events-none'
+      }`}
       onClick={handleBackdropClick}
     >
-      <div className="card shadow-lg bg-base-100 max-w-md w-full mx-4">
+      <div
+        className={`card shadow-lg bg-base-100 max-w-md w-full mx-4 transition-transform duration-300 ${
+          isOpen ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
+        }`}
+        style={{
+          transform: isOpen ? 'scale(1)' : 'scale(0.9)',
+          transition: 'transform 300ms ease, opacity 300ms ease',
+        }}
+      >
         <div className="card-body p-6">
           <h2 className="text-xl font-bold text-center opacity-90">
             {project.title}
