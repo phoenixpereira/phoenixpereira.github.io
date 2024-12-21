@@ -67,6 +67,15 @@ const CONFIG = {
           date: 'Nov 2023 - Current',
         },
         {
+          title: 'Weatherify',
+          description:
+            'For the 2nd 2024 UniSA Programming Community Code Jam, I developed Weatherify, an iOS weather app built using SwiftUI and the Open-Meteo API. Weatherify provides real-time weather updates, along with detailed hourly and weekly forecasts. By default, the app uses your current location, but it also allows you to set a custom city for weather updates. Additionally, it supports both light and dark mode for a seamless user experience.',
+          imageUrl: '/projects/weatherify.png',
+          link: 'https://github.com/phoenixpereira/weatherify',
+          techStack: ['Swift', 'SwiftUI'],
+          date: 'Dec 2024 - Dec 2024',
+        },
+        {
           title: 'Statify',
           description:
             "Statify is a Spotify dashboard created by Christian Dianos and me for the 2024 UniSA Programming Community Code Jam. It visualises a user's top 50 artists, top 100 tracks, and listening trends, including music popularity and duration, using Spotify's API. Statify also generates personalised playlists via Spotify’s recommendations API based on the user's listening habits.",
