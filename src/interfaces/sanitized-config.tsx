@@ -76,6 +76,7 @@ export interface SanitizedExperience {
   position?: string;
   from: string;
   to: string;
+  description?: string;
 }
 
 export interface SanitizedExtracurricular {
