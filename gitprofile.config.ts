@@ -192,8 +192,19 @@ const CONFIG = {
 
   experiences: [
     {
+      company: 'Defence Security Institute',
+      position: 'Cyber Summer Research Intern',
+      description:
+        'I was selected for the joint Defence Science and Technology Group and Defence Security Institute Cyber Security Summer Program to conduct research on automating aspects of re-hosting for Linux-based systems.',
+      from: 'Nov 2024',
+      to: 'Present',
+      companyLink: 'https://example.com',
+    },
+    {
       company: 'Australian Government',
       position: 'STEM Cadet',
+      description:
+        'Researched emerging technologies alongside team members and presented findings to senior management. Delivered actionable recommendations leading to several technologies being integrated into future government plans. Deployed and documented Azure services with Terraform to streamline and support technology integration initiatives.',
       from: 'Feb 2024',
       to: 'Present',
       companyLink: 'https://example.com',
@@ -211,16 +222,24 @@ const CONFIG = {
     {
       institution: 'The University of Adelaide',
       degree: 'Bachelor of Computer Science (Advanced)',
-      from: '2023',
-      to: '2025 (Expected)',
+      from: 'Jan 2023',
+      to: 'Nov 2025 (Expected)',
     },
   ],
   extracurriculars: [
     {
       company: 'Computer Science Club',
+      position: 'Open Source & Infrastructure Manager',
+      from: 'Oct 2024',
+      to: 'Current',
+      description:
+        'Oversaw the club’s server management and infrastructure to ensure seamless operations. Implemented Keycloak authentication to enable SSO for the club website and internal wiki. Configured email sending through AWS SES and managed web services using SWAG/Nginx. Set up GitHub Actions for CI/CD pipelines, automating the build and deployment processes for multiple projects. Led open-source initiatives affiliated with the club, facilitating development and collaboration on several projects.',
+    },
+    {
+      company: 'Computer Science Club',
       position: 'Open Source Officer',
       from: 'Dec 2023',
-      to: 'Present',
+      to: 'Oct 2024',
       description:
         'Led the open-source projects affiliated with the club, steering the development and progression of these initiatives. Actively contributed to club related projects, collaborating with team members to support the projects’ development. Developed and maintained the club’s website, providing members with up-to-date information regarding club events.',
     },
@@ -307,7 +326,7 @@ const CONFIG = {
 
   enablePWA: true,
   about:
-    "Hi, I'm Phoenix, a second-year Bachelor of Computer Science (Advanced) student at the University of Adelaide. I'm interested in web development, cyber security and artificial intelligence. When I'm not coding, you can find me playing video games, watching movies, and photographing various landscapes. I'm currently seeking opportunities to apply myself and expand my knowledge through software engineering internships, please feel free to get in touch.",
+    "Hi, I'm Phoenix, a third-year Bachelor of Computer Science (Advanced) student at the University of Adelaide. I'm interested in web development and cyber security. When I'm not coding, you can find me playing video games, watching movies, and photographing various landscapes. I'm currently seeking graduate positions where I can apply my skills and further expand my knowledge in software engineering. Please feel free to get in touch.",
 };
 
 export default CONFIG;

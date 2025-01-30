@@ -6,11 +6,13 @@ const ListItem = ({
   time,
   position,
   company,
+  description,
 }: {
   time: React.ReactNode;
   position?: React.ReactNode;
   company?: React.ReactNode;
   companyLink?: string;
+  description?: React.ReactNode;
 }) => (
   <li className="mb-5 ml-4">
     <div
@@ -22,6 +24,7 @@ const ListItem = ({
     <div className="mb-4 font-normal">
       <p>{company}</p>
     </div>
+    <p>{description}</p>
   </li>
 );
 
@@ -48,6 +51,7 @@ const ExperienceCard = ({
             className: 'my-1.5',
           })}
           company={skeleton({ widthCls: 'w-6/12', heightCls: 'h-3' })}
+          description={skeleton({ widthCls: 'w-10/12', heightCls: 'h-3' })}
         />,
       );
     }
@@ -78,6 +82,7 @@ const ExperienceCard = ({
                     time={`${experience.from} - ${experience.to}`}
                     position={experience.position}
                     company={experience.company}
+                    description={experience.description}
                   />
                 ))}
               </Fragment>

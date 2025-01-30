@@ -28,7 +28,7 @@ const About: React.FC<AboutProps> = ({
               <span className=" opacity-70">About Me</span>
             )}
           </h5>
-          <span className=" text-opacity-60 block text-justify">
+          <span className=" text-opacity-60 block text-left">
             {loading || !profile
               ? skeleton({ widthCls: 'w-64', heightCls: 'h-5' })
               : about}
