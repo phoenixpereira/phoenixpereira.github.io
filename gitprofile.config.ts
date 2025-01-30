@@ -222,16 +222,24 @@ const CONFIG = {
     {
       institution: 'The University of Adelaide',
       degree: 'Bachelor of Computer Science (Advanced)',
-      from: '2023',
-      to: '2025 (Expected)',
+      from: 'Jan 2023',
+      to: 'Nov 2025 (Expected)',
     },
   ],
   extracurriculars: [
     {
       company: 'Computer Science Club',
+      position: 'Open Source & Infrastructure Manager',
+      from: 'Oct 2024',
+      to: 'Current',
+      description:
+        'Oversaw the club’s server management and infrastructure to ensure seamless operations. Implemented Keycloak authentication to enable SSO for the club website and internal wiki. Configured email sending through AWS SES and managed web services using SWAG/Nginx. Set up GitHub Actions for CI/CD pipelines, automating the build and deployment processes for multiple projects. Led open-source initiatives affiliated with the club, facilitating development and collaboration on several projects.',
+    },
+    {
+      company: 'Computer Science Club',
       position: 'Open Source Officer',
       from: 'Dec 2023',
-      to: 'Present',
+      to: 'Oct 2024',
       description:
         'Led the open-source projects affiliated with the club, steering the development and progression of these initiatives. Actively contributed to club related projects, collaborating with team members to support the projects’ development. Developed and maintained the club’s website, providing members with up-to-date information regarding club events.',
     },
