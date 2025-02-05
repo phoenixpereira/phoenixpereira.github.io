@@ -140,7 +140,7 @@ const CONFIG = {
   },
   seo: {
     title: 'Phoenix Pereira',
-    description: '',
+    description: 'Phoenix Pereira | Portfolio',
     imageURL: '',
   },
   social: {
