@@ -197,7 +197,7 @@ const CONFIG = {
       description:
         'I was selected for the joint Defence Science and Technology Group and Defence Security Institute Cyber Security Summer Program to conduct research on automating aspects of re-hosting for Linux-based systems.',
       from: 'Nov 2024',
-      to: 'Present',
+      to: 'Feb 2025',
       companyLink: 'https://example.com',
     },
     {
