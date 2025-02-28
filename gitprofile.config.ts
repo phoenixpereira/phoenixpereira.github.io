@@ -192,21 +192,21 @@ const CONFIG = {
 
   experiences: [
     {
-      company: 'Defence Security Institute',
-      position: 'Cyber Summer Research Intern',
-      description:
-        'I was selected for the joint Defence Science and Technology Group and Defence Security Institute Cyber Security Summer Program to conduct research on automating aspects of re-hosting for Linux-based systems.',
-      from: 'Nov 2024',
-      to: 'Feb 2025',
-      companyLink: 'https://example.com',
-    },
-    {
       company: 'Australian Government',
       position: 'STEM Cadet',
       description:
         'Researched emerging technologies alongside team members and presented findings to senior management. Delivered actionable recommendations leading to several technologies being integrated into future government plans. Deployed and documented Azure services with Terraform to streamline and support technology integration initiatives.',
       from: 'Feb 2024',
       to: 'Present',
+      companyLink: 'https://example.com',
+    },
+    {
+      company: 'Defence Security Institute',
+      position: 'Cyber Summer Research Intern',
+      description:
+        'I was selected for the joint Defence Science and Technology Group and Defence Security Institute Cyber Security Summer Program to conduct research on automating aspects of re-hosting for Linux-based systems.',
+      from: 'Nov 2024',
+      to: 'Feb 2025',
       companyLink: 'https://example.com',
     },
   ],
