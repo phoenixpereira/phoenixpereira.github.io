@@ -223,7 +223,7 @@ const CONFIG = {
       institution: 'The University of Adelaide',
       degree: 'Bachelor of Computer Science (Advanced)',
       from: 'Jan 2023',
-      to: 'Nov 2025 (Expected)',
+      to: 'Dec 2025 (Expected)',
     },
   ],
   extracurriculars: [
@@ -234,6 +234,14 @@ const CONFIG = {
       to: 'Current',
       description:
         'Oversaw the club’s server management and infrastructure to ensure seamless operations. Implemented Keycloak authentication to enable SSO for the club website and internal wiki. Configured email sending through AWS SES and managed web services using SWAG/Nginx. Set up GitHub Actions for CI/CD pipelines, automating the build and deployment processes for multiple projects. Led open-source initiatives affiliated with the club, facilitating development and collaboration on several projects.',
+    },
+    {
+      company: 'University of Adelaide',
+      position: 'NATO Locked Shields Partner Run Participant',
+      from: 'Feb 2025',
+      to: 'Apr 2025',
+      description:
+        'As Kubernetes Team Lead for the University of Adelaide Blue Team, I led efforts to ensure the security and availability of Kubernetes services during simulated cyber defense exercises. I focused on implementing robust security measures, managing backups, and ensuring services remained up and functional. I also played a key role in incident response for the Kubernetes services, quickly addressing and mitigating security threats while writing up tickets to communicate status with the broader team to maintain service continuity in a high-pressure environment.',
     },
     {
       company: 'Computer Science Club',
