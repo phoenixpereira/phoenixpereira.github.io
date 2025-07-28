@@ -334,7 +334,7 @@ const CONFIG = {
 
   enablePWA: true,
   about:
-    "Hi, I'm Phoenix, a third-year Bachelor of Computer Science (Advanced) student at the University of Adelaide. I'm interested in web development and cyber security. When I'm not coding, you can find me playing video games, watching movies, and photographing various landscapes. I'm currently seeking graduate positions where I can apply my skills and further expand my knowledge in software engineering. Please feel free to get in touch.",
+    "Hi, I'm Phoenix, a third-year Bachelor of Computer Science (Advanced) student at the University of Adelaide. I'm interested in web development and cyber security. When I'm not coding, you can find me playing video games, watching movies, and photographing various landscapes.",
 };
 
 export default CONFIG;
