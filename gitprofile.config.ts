@@ -39,7 +39,7 @@ const CONFIG = {
           imageUrl: '/projects/courses-api.png',
           link: 'https://github.com/compsci-adl/courses-api',
           techStack: ['Python', 'FastAPI', 'Requests'],
-          date: 'Jul 2024 - Current',
+          date: 'Jul 2024 - Nov 2025',
         },
         {
           title: 'DuckBot',
@@ -48,7 +48,7 @@ const CONFIG = {
           imageUrl: '/projects/duckbot.png',
           link: 'https://github.com/compsci-adl/duckbot',
           techStack: ['Python', 'Discord.py'],
-          date: 'May 2024 - Current',
+          date: 'May 2024 - Nov 2025',
         },
         {
           title: 'Computer Science Club Website',
@@ -64,7 +64,16 @@ const CONFIG = {
             'SQLite',
             'Redis',
           ],
-          date: 'Nov 2023 - Current',
+          date: 'Nov 2023 - Nov 2025',
+        },
+        {
+          title: 'MyVote',
+          description:
+            'Made a voting system for the Computer Science Club using the Hare-Clark voting algorithm and Keycloak authentication to ensure voter validation for club members.',
+          imageUrl: '/projects/myvote.png',
+          link: 'https://github.com/compsci-adl/myvote',
+          techStack: ['React', 'Typescript', 'Tailwind CSS', 'Vite', 'SQLite'],
+          date: 'Feb 2025 - Nov 2025',
         },
         {
           title: 'Weatherify',
