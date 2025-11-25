@@ -231,7 +231,7 @@ const CONFIG = {
       company: 'Computer Science Club',
       position: 'Open Source & Infrastructure Manager',
       from: 'Oct 2024',
-      to: 'Current',
+      to: 'Nov 2025',
       description:
         'Oversaw the club’s server management and infrastructure to ensure seamless operations. Implemented Keycloak authentication to enable SSO for the club website and internal wiki. Configured email sending through AWS SES and managed web services using SWAG/Nginx. Set up GitHub Actions for CI/CD pipelines, automating the build and deployment processes for multiple projects. Led open-source initiatives affiliated with the club, facilitating development and collaboration on several projects.',
     },
